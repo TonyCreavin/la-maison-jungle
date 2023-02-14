@@ -1,8 +1,10 @@
 import './App.css';
 import logo from './assets/logo.png';
 import Banner from './components/Banner';
+import Footer from './components/Footer';
 //import Cart from './components/Cart';
 import ShoppingList from './components/ShoppingList';
+import './styles/Footer.css';
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       </Banner>
       {/* <Cart /> */}
       <ShoppingList />
+      <Footer />
     </div>
   );
 }

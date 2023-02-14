@@ -10,11 +10,34 @@ export default function PlantItem({
   water,
   isSpecialOffer,
 }) {
-  function handleClick(plantName) {
-    alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix 🌱✨`);
+  function handleClick(plantLight, plantWater) {
+    if (plantLight < 2) {
+      alert(`"Cette plante requiert peu de lumière" ✨`);
+    }
+    if (plantLight == 2) {
+      alert(`"Cette plante requiert modérement de lumière" ✨`);
+    }
+    if (plantLight > 2) {
+      alert(`"Cette plante requiert beaucoup de lumière" ✨`);
+      console.log(plantLight);
+    }
+    if (plantWater < 2) {
+      alert(`"Cette plante requiert peu d'arrosage" 💧🌱`);
+    }
+    if (plantWater == 2) {
+      alert(`"Cette plante requiert modérement d'arrosage" 💧🌱`);
+    }
+    if (plantWater > 2) {
+      alert(`"Cette plante beaucoup peu d'arrosage" 💧🌱`);
+    }
   }
+
   return (
-    <li key={id} className="lmj-plant-item" onClick={() => handleClick(name)}>
+    <li
+      key={id}
+      className="lmj-plant-item"
+      onClick={() => handleClick(light, water)}
+    >
       <img className="lmj-plant-item-cover" src={cover} alt={`${name} cover`} />
       {name}
       <div>
